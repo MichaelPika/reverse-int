@@ -1,3 +1,6 @@
 module.exports = function reverse(n) {
-    return ((n + "").split("").reverse().join("") - 0);
+    if (n < 0){
+        n = n * (-1);
+    }
+    return Math.abs((n + "").split("").reverse().join(""));
 };
